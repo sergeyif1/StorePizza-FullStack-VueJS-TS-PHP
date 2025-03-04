@@ -1,0 +1,41 @@
+<!-- src/layouts/DefaultLayout.vue -->
+<script setup>
+import { ref, onMounted } from "vue";
+import Header from "@/components/shared/Header.vue";
+
+const fontClass = ref("");
+
+onMounted(() => {
+  // Загрузка шрифта Nunito с нужными параметрами
+  const link = document.createElement("link");
+  link.href =
+    "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap";
+  link.rel = "stylesheet";
+  document.head.appendChild(link);
+
+  // Установка класса для применения шрифта
+  fontClass.value = "font-nunito antialiased";
+});
+</script>
+
+<script>
+export default {
+  name: "DefaultLayout",
+};
+</script>
+
+<style scoped>
+.font-nunito {
+  font-family: "Nunito", sans-serif;
+}
+</style>
+
+<template>
+  <div :class="fontClass">
+    <Header />
+    <main class="min-h-screen">
+      <slot />
+    </main>
+    <Footer />
+  </div>
+</template>
