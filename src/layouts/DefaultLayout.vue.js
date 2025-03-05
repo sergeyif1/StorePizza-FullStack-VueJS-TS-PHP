@@ -42,6 +42,11 @@ export default await (async () => {
         const __VLS_1 = __VLS_0({}, ...__VLS_functionalComponentArgsRest(__VLS_0));
         __VLS_elementAsFunction(__VLS_intrinsicElements.main, __VLS_intrinsicElements.main)({ ...{ class: ("min-h-screen") }, });
         var __VLS_5 = {};
+        const __VLS_6 = __VLS_resolvedLocalAndGlobalComponents.Footer;
+        /** @type { [typeof __VLS_components.Footer, ] } */
+        // @ts-ignore
+        const __VLS_7 = __VLS_asFunctionalComponent(__VLS_6, new __VLS_6({}));
+        const __VLS_8 = __VLS_7({}, ...__VLS_functionalComponentArgsRest(__VLS_7));
         __VLS_styleScopedClasses['min-h-screen'];
         var __VLS_slots;
         var __VLS_inheritedAttrs;

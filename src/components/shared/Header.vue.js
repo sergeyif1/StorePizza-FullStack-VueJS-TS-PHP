@@ -1,10 +1,10 @@
-import { computed } from 'vue';
-import Container from '@/components/shared/Container.vue';
-import Button from '../ui/button/Button.vue';
-import UserIcon from '@/components/icons/UserIcon.vue';
+import { computed } from "vue";
+import Container from "@/components/shared/Container.vue";
+import Button from "../ui/button/Button.vue";
+import UserIcon from "@/components/icons/UserIcon.vue";
 const { defineProps, defineSlots, defineEmits, defineExpose, defineModel, defineOptions, withDefaults, } = await import('vue');
 const props = defineProps();
-const computedClass = computed(() => `border border-b ${props.className || ''}`);
+const computedClass = computed(() => `border border-b ${props.className || ""}`);
 ; /* PartiallyEnd: #3632/scriptSetup.vue */
 const __VLS_fnComponent = (await import('vue')).defineComponent({});
 ;
@@ -36,6 +36,7 @@ function __VLS_template() {
     const __VLS_6 = __VLS_asFunctionalComponent(__VLS_5, new __VLS_5({ to: ("vue-router "), }));
     const __VLS_7 = __VLS_6({ to: ("vue-router "), }, ...__VLS_functionalComponentArgsRest(__VLS_6));
     __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("flex items-center gap-4") }, });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.img)({ src: ("@/logo.png"), alt: ("Logo"), width: ("35"), height: ("35"), });
     __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
     __VLS_elementAsFunction(__VLS_intrinsicElements.h1, __VLS_intrinsicElements.h1)({ ...{ class: ("text-2xl uppercase font-black") }, });
     __VLS_elementAsFunction(__VLS_intrinsicElements.p, __VLS_intrinsicElements.p)({ ...{ class: ("text-sm text-gray-400 leading-3") }, });
@@ -54,6 +55,28 @@ function __VLS_template() {
     const __VLS_17 = __VLS_16({ size: ("16"), }, ...__VLS_functionalComponentArgsRest(__VLS_16));
     __VLS_nonNullable(__VLS_15.slots).default;
     var __VLS_15;
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({});
+    // @ts-ignore
+    [Button, Button,];
+    // @ts-ignore
+    const __VLS_21 = __VLS_asFunctionalComponent(Button, new Button({ variant: ("outline"), }));
+    const __VLS_22 = __VLS_21({ variant: ("outline"), }, ...__VLS_functionalComponentArgsRest(__VLS_21));
+    __VLS_elementAsFunction(__VLS_intrinsicElements.b, __VLS_intrinsicElements.b)({});
+    __VLS_elementAsFunction(__VLS_intrinsicElements.span)({ className: ("h-full w-[1px] bg-white/30 mx-3"), });
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ className: ("flex items-center gap-1 transition duration-300 group-hover:opacity-0"), });
+    const __VLS_26 = __VLS_resolvedLocalAndGlobalComponents.ShoppingCart;
+    /** @type { [typeof __VLS_components.ShoppingCart, ] } */
+    // @ts-ignore
+    const __VLS_27 = __VLS_asFunctionalComponent(__VLS_26, new __VLS_26({ className: ("h-4 w-4 relative"), strokeWidth: ("{2}"), }));
+    const __VLS_28 = __VLS_27({ className: ("h-4 w-4 relative"), strokeWidth: ("{2}"), }, ...__VLS_functionalComponentArgsRest(__VLS_27));
+    __VLS_elementAsFunction(__VLS_intrinsicElements.b, __VLS_intrinsicElements.b)({});
+    const __VLS_32 = __VLS_resolvedLocalAndGlobalComponents.ArrowRight;
+    /** @type { [typeof __VLS_components.ArrowRight, ] } */
+    // @ts-ignore
+    const __VLS_33 = __VLS_asFunctionalComponent(__VLS_32, new __VLS_32({ className: ("w-5 absolute right-5 transition duration-300 -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0"), }));
+    const __VLS_34 = __VLS_33({ className: ("w-5 absolute right-5 transition duration-300 -translate-x-2 opacity-0 group-hover:opacity-100 group-hover:translate-x-0"), }, ...__VLS_functionalComponentArgsRest(__VLS_33));
+    __VLS_nonNullable(__VLS_25.slots).default;
+    var __VLS_25;
     __VLS_nonNullable(__VLS_4.slots).default;
     var __VLS_4;
     __VLS_styleScopedClasses['flex'];

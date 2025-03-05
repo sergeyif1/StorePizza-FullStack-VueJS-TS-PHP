@@ -1,9 +1,5 @@
 <script setup lang="ts">
-interface Props {
-  className?: string;
-}
-
-const props = defineProps<Props>();
+defineProps<{ className?: string }>();
 </script>
 
 <template>
