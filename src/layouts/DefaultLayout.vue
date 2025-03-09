@@ -2,6 +2,9 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import Header from "@/components/shared/Header.vue";
+import Title from "../components/Title.vue";
+import Categories from "../components/shared/Categories.vue";
+import Container from "../components/shared/Container.vue";
 
 const fontClass = ref("");
 
@@ -33,6 +36,10 @@ export default {
 <template>
   <div :class="fontClass">
     <Header />
+    <Container className="mt-5">
+      <Title text="Все пиццы" size="lg" className="font-extrabold" />
+    </Container>
+    <Categories />
     <main class="min-h-screen">
       <slot />
     </main>

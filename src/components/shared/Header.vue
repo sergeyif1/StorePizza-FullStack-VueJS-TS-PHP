@@ -32,11 +32,11 @@ const computedClass = computed(
       <!-- Правая часть -->
       <div class="flex items-center gap-3">
         <Button variant="outline" class="flex items-center gap-1">
-          <UserIcon size="16" />
+          <UserIcon :size="16" />
           Войти
         </Button>
         <div>
-          <Button variant="outline" class="group relative">
+          <Button class="group relative">
             <b>520 S</b>
             <span :class="'h-full w-[1px] bg-gray-300 mx-3'" />
             <div
