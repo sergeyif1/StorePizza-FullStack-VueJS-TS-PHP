@@ -3,6 +3,7 @@ import Header from "@/components/shared/Header.vue";
 import Title from "../components/Title.vue";
 import Categories from "../components/shared/Categories.vue";
 import Container from "../components/shared/Container.vue";
+import SortPopup from "../components/shared/Sort-popup.vue";
 export default await (async () => {
     const fontClass = ref("");
     onMounted(() => {
@@ -54,13 +55,17 @@ export default await (async () => {
     // @ts-ignore
     const __VLS_9 = __VLS_asFunctionalComponent(Categories, new Categories({}));
     const __VLS_10 = __VLS_9({}, ...__VLS_functionalComponentArgsRest(__VLS_9));
+    /** @type {[typeof SortPopup, ]} */ ;
+    // @ts-ignore
+    const __VLS_12 = __VLS_asFunctionalComponent(SortPopup, new SortPopup({}));
+    const __VLS_13 = __VLS_12({}, ...__VLS_functionalComponentArgsRest(__VLS_12));
     __VLS_asFunctionalElement(__VLS_intrinsicElements.main, __VLS_intrinsicElements.main)({
         ...{ class: "min-h-screen" },
     });
-    var __VLS_12 = {};
+    var __VLS_15 = {};
     /** @type {__VLS_StyleScopedClasses['min-h-screen']} */ ;
     // @ts-ignore
-    var __VLS_13 = __VLS_12;
+    var __VLS_16 = __VLS_15;
     var __VLS_dollars;
     const __VLS_self = (await import('vue')).defineComponent({
         setup() {
@@ -69,6 +74,7 @@ export default await (async () => {
                 Title: Title,
                 Categories: Categories,
                 Container: Container,
+                SortPopup: SortPopup,
                 fontClass: fontClass,
             };
         },

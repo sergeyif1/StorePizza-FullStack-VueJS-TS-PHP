@@ -1,10 +1,9 @@
-<!-- src/layouts/DefaultLayout.vue -->
 <script setup>
 import { ref, onMounted } from "vue";
 import Header from "@/components/shared/Header.vue";
-import Title from "../components/Title.vue";
-import Categories from "../components/shared/Categories.vue";
-import Container from "../components/shared/Container.vue";
+import Title from "@/components/Title.vue";
+import Container from "@/components/shared/Container.vue";
+import TopBar from "@/components/shared/TopBar.vue";
 
 const fontClass = ref("");
 
@@ -21,12 +20,6 @@ onMounted(() => {
 });
 </script>
 
-<script>
-export default {
-  name: "DefaultLayout",
-};
-</script>
-
 <style scoped>
 .font-nunito {
   font-family: "Nunito", sans-serif;
@@ -36,10 +29,10 @@ export default {
 <template>
   <div :class="fontClass">
     <Header />
-    <Container className="mt-5">
-      <Title text="Все пиццы" size="lg" className="font-extrabold" />
+    <Container class="mt-5">
+      <Title text="Все пиццы" size="lg" class="font-extrabold" />
     </Container>
-    <Categories />
+    <TopBar />
     <main class="min-h-screen">
       <slot />
     </main>
