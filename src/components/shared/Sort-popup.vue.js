@@ -1,6 +1,6 @@
 import { defineProps } from "vue";
 import { ArrowUpDown } from "lucide-vue-next";
-import cn from "@/lib/utils";
+import { cn } from "@/lib/utils.js";
 const props = defineProps({
     className: String,
 });

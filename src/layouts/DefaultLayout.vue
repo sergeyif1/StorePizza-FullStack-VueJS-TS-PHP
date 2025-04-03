@@ -4,6 +4,7 @@ import Header from "@/components/shared/Header.vue";
 import Title from "@/components/Title.vue";
 import Container from "@/components/shared/Container.vue";
 import TopBar from "@/components/shared/TopBar.vue";
+import Filters from "@/components/shared/Filters.vue";
 
 const fontClass = ref("");
 
@@ -33,7 +34,20 @@ onMounted(() => {
       <Title text="Все пиццы" size="lg" class="font-extrabold" />
     </Container>
     <TopBar />
+
     <main class="min-h-screen">
+      <Container class="mt-10 pb-14">
+        <div class="flex gap-[100px]">
+          <!-- Фильтрация -->
+          <div class="w-[250px]">
+            <Filters />
+          </div>
+          <!-- Список товаров -->
+          <div class="flex-1">
+            <div class="flex flex-wrap gap-16">Список товаров</div>
+          </div>
+        </div>
+      </Container>
       <slot />
     </main>
   </div>
