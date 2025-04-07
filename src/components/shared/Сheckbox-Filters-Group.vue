@@ -27,17 +27,30 @@ const props = withDefaults(defineProps<Props>(), {
   className: "",
 });
 
-// Реактивное состояние для показа всех элементов
+// Реактивное состояние
 const showAll = ref(false);
+const searchValue = ref("");
+
+// Фильтруем элементы по введенному значению
+const filteredItems = computed(() => {
+  const search = searchValue.value.trim().toLowerCase();
+  return search
+    ? props.defaultItems.filter((item) =>
+        item.text.toLowerCase().includes(search)
+      )
+    : props.defaultItems;
+});
 
 // Вычисляемый список элементов (либо все, либо ограниченное количество)
 const list = computed(() =>
-  showAll.value ? props.items : props.defaultItems.slice(0, props.limit)
+  showAll.value
+    ? filteredItems.value
+    : filteredItems.value.slice(0, props.limit)
 );
 
 // Проверяем, нужно ли показывать кнопку "Показать все"
 const shouldShowButton = computed(
-  () => props.items.length > (props.limit || 0)
+  () => filteredItems.value.length > (props.limit || 0)
 );
 
 // Функция переключения состояния
@@ -53,6 +66,7 @@ const toggleShowAll = () => {
     <!-- Поле поиска отображается только если showAll === true -->
     <div v-if="showAll" class="mb-5">
       <Input
+        v-model="searchValue"
         :placeholder="props.searchInputPlaceholder"
         class="bg-gray-50 border-none" />
     </div>
@@ -69,9 +83,9 @@ const toggleShowAll = () => {
     </div>
 
     <!-- Кнопка переключения списка -->
-    <div v-if="shouldShowButton" class="border-t border-t-neutral-400 pt-4">
+    <div v-if="shouldShowButton" class="border-t border-neutral-200 pt-4">
       <button @click="toggleShowAll" class="mt-3 text-primary">
-        {{ showAll ? "Скрыть" : "+Показать все" }}
+        {{ showAll ? "Скрыть" : "Показать все" }}
       </button>
     </div>
   </div>

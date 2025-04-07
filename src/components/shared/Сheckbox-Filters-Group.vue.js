@@ -11,6 +11,8 @@ export default await (async () => {
     const showAll = ref(false);
     // Вычисляемый список элементов (либо все, либо ограниченное количество)
     const list = computed(() => showAll.value ? props.items : props.defaultItems.slice(0, props.limit));
+    // Проверяем, нужно ли показывать кнопку "Показать все"
+    const shouldShowButton = computed(() => props.items.length > (props.limit || 0));
     // Функция переключения состояния
     const toggleShowAll = () => {
         showAll.value = !showAll.value;
@@ -67,14 +69,16 @@ export default await (async () => {
             checked: (item.checked),
         }, ...__VLS_functionalComponentArgsRest(__VLS_3));
     }
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-        ...{ onClick: (__VLS_ctx.toggleShowAll) },
-        ...{ class: ('borger-t-neutral-100 pt-4') },
-    });
-    __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)({
-        ...{ class: "mt-3 text-primary" },
-    });
-    (__VLS_ctx.showAll ? "Скрыть" : "Показать все");
+    if (__VLS_ctx.shouldShowButton) {
+        __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+            ...{ class: "border-t border-t-neutral-400 pt-4" },
+        });
+        __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)({
+            ...{ onClick: (__VLS_ctx.toggleShowAll) },
+            ...{ class: "mt-3 text-primary" },
+        });
+        (__VLS_ctx.showAll ? "Скрыть" : "+Показать все");
+    }
     /** @type {__VLS_StyleScopedClasses['font-bold']} */ ;
     /** @type {__VLS_StyleScopedClasses['mb-3']} */ ;
     /** @type {__VLS_StyleScopedClasses['mb-5']} */ ;
@@ -88,7 +92,8 @@ export default await (async () => {
     /** @type {__VLS_StyleScopedClasses['pr-2']} */ ;
     /** @type {__VLS_StyleScopedClasses['overflow-auto']} */ ;
     /** @type {__VLS_StyleScopedClasses['scrollbar']} */ ;
-    /** @type {__VLS_StyleScopedClasses['borger-t-neutral-100']} */ ;
+    /** @type {__VLS_StyleScopedClasses['border-t']} */ ;
+    /** @type {__VLS_StyleScopedClasses['border-t-neutral-400']} */ ;
     /** @type {__VLS_StyleScopedClasses['pt-4']} */ ;
     /** @type {__VLS_StyleScopedClasses['mt-3']} */ ;
     /** @type {__VLS_StyleScopedClasses['text-primary']} */ ;
@@ -100,6 +105,7 @@ export default await (async () => {
                 Input: Input,
                 showAll: showAll,
                 list: list,
+                shouldShowButton: shouldShowButton,
                 toggleShowAll: toggleShowAll,
             };
         },
