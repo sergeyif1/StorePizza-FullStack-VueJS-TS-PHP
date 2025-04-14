@@ -45,9 +45,10 @@ onMounted(() => {
           </div>
           <!-- Список товаров -->
           <div class="flex-1">
-            <div class="flex flex-wrap gap-16">
+            <div ref="containerRef" class="flex flex-wrap gap-16">
               <ProductsGroupList
                 title="Пицца"
+                categoryId="1"
                 :items="[
                   {
                     id: 1,
@@ -91,6 +92,7 @@ onMounted(() => {
                     price: 240,
                     items: [{ price: 240 }],
                   },
+
                   {
                     id: 7,
                     name: 'Капричоза',
@@ -100,128 +102,109 @@ onMounted(() => {
                   },
                   {
                     id: 8,
-                    name: 'Сырная',
-                    imageUrl: '/1325588gfgfd.jpg',
-                    price: 230,
-                    items: [{ price: 230 }],
-                  },
-                  {
-                    id: 9,
-                    name: 'Овощная',
-                    imageUrl: '/1325588gfgfd.jpg',
-                    price: 210,
-                    items: [{ price: 210 }],
-                  },
-                  {
-                    id: 10,
-                    name: 'Морская',
+                    name: 'Гавайская',
                     imageUrl: '/1325588gfgfd.jpg',
                     price: 280,
                     items: [{ price: 280 }],
                   },
                   {
-                    id: 11,
+                    id: 9,
+                    name: 'Пицца с морепродуктами',
+                    imageUrl: '/1325588gfgfd.jpg',
+                    price: 300,
+                    items: [{ price: 300 }],
+                  },
+                  {
+                    id: 10,
                     name: 'Пицца с грибами',
+                    imageUrl: '/1325588gfgfd.jpg',
+                    price: 220,
+                    items: [{ price: 220 }],
+                  },
+                  {
+                    id: 11,
+                    name: 'Пицца с ананасами',
                     imageUrl: '/1325588gfgfd.jpg',
                     price: 240,
                     items: [{ price: 240 }],
                   },
                   {
                     id: 12,
-                    name: 'Пицца с ананасами',
-                    imageUrl: '/1325588gfgfd.jpg',
-                    price: 250,
-                    items: [{ price: 250 }],
-                  },
-                  {
-                    id: 13,
                     name: 'Пицца с курицей',
-                    imageUrl: '/1325588gfgfd.jpg',
-                    price: 270,
-                    items: [{ price: 270 }],
-                  },
-                  {
-                    id: 14,
-                    name: 'Пицца с беконом',
-                    imageUrl: '/1325588gfgfd.jpg',
-                    price: 290,
-                    items: [{ price: 290 }],
-                  },
-                  {
-                    id: 15,
-                    name: 'Пицца с ветчиной',
                     imageUrl: '/1325588gfgfd.jpg',
                     price: 260,
                     items: [{ price: 260 }],
                   },
-                  {
-                    id: 16,
-                    name: 'Пицца с креветками',
-                    imageUrl: '/1325588gfgfd.jpg',
-                    price: 320,
-                    items: [{ price: 320 }],
-                  },
-                  {
-                    id: 17,
-                    name: 'Пицца с тунцом',
-                    imageUrl: '/1325588gfgfd.jpg',
-                    price: 300,
-                    items: [{ price: 300 }],
-                  },
-                  {
-                    id: 3,
-                    name: 'Гавайская',
-                    imageUrl: '/1325588gfgfd.jpg',
-                    price: 220,
-                    items: [{ price: 220 }],
-                  },
                 ]" />
               <ProductsGroupList
                 title="Салаты"
+                categoryId="2"
                 :items="[
                   {
                     id: 1,
                     name: 'Цезарь',
-                    imageUrl: '/1325588gfgfd.jpg',
+                    imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
                     price: 150,
                     items: [{ price: 150 }],
                   },
                   {
                     id: 2,
                     name: 'Греческий',
-                    imageUrl: '/1325588gfgfd.jpg',
+                    imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
                     price: 130,
                     items: [{ price: 130 }],
                   },
                   {
                     id: 3,
                     name: 'Овощной',
-                    imageUrl: '/1325588gfgfd.jpg',
+                    imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
                     price: 120,
                     items: [{ price: 120 }],
+                  },
+                  {
+                    id: 4,
+                    name: 'Тунец',
+                    imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
+                    price: 160,
+                    items: [{ price: 160 }],
+                  },
+                  {
+                    id: 5,
+                    name: 'Куриный',
+                    imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
+                    price: 140,
+                    items: [{ price: 140 }],
                   },
                 ]" />
               <ProductsGroupList
                 title="Напитки"
+                categoryId="3"
                 :items="[
                   {
                     id: 1,
                     name: 'Кока-Кола',
-                    imageUrl: '/1325588gfgfd.jpg',
+                    imageUrl: '/drink/01959617dc25776d8cbf65dd4af4ea60.avif',
                     price: 50,
                     items: [{ price: 50 }],
                   },
                   {
                     id: 2,
                     name: 'Фанта',
-                    imageUrl: '/1325588gfgfd.jpg',
+                    imageUrl: '/drink/0194b76f2778790e920584c191edd032.avif',
                     price: 50,
                     items: [{ price: 50 }],
                   },
                   {
                     id: 3,
                     name: 'Спрайт',
-                    imageUrl: '/1325588gfgfd.jpg',
+                    imageUrl: '/drink/0194b770601f78a99d9671579a5fb301.avif',
+                    price: 50,
+                    items: [{ price: 50 }],
+                  },
+                  {
+                    id: 4,
+                    name: 'Экспрессо',
+                    imageUrl: '/drink/0195961733e974ee8f11929fc2a0e0a8.avif',
                     price: 50,
                     items: [{ price: 50 }],
                   },

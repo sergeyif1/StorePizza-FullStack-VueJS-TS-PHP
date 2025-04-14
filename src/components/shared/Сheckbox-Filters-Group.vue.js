@@ -7,12 +7,22 @@ export default await (async () => {
         searchInputPlaceholder: "Поиск...",
         className: "",
     });
-    // Реактивное состояние для показа всех элементов
+    // Реактивное состояние
     const showAll = ref(false);
+    const searchValue = ref("");
+    // Фильтруем элементы по введенному значению
+    const filteredItems = computed(() => {
+        const search = searchValue.value.trim().toLowerCase();
+        return search
+            ? props.defaultItems.filter((item) => item.text.toLowerCase().includes(search))
+            : props.defaultItems;
+    });
     // Вычисляемый список элементов (либо все, либо ограниченное количество)
-    const list = computed(() => showAll.value ? props.items : props.defaultItems.slice(0, props.limit));
+    const list = computed(() => showAll.value
+        ? filteredItems.value
+        : filteredItems.value.slice(0, props.limit));
     // Проверяем, нужно ли показывать кнопку "Показать все"
-    const shouldShowButton = computed(() => props.items.length > (props.limit || 0));
+    const shouldShowButton = computed(() => filteredItems.value.length > (props.limit || 0));
     // Функция переключения состояния
     const toggleShowAll = () => {
         showAll.value = !showAll.value;
@@ -40,10 +50,12 @@ export default await (async () => {
         /** @type {[typeof Input, ]} */ ;
         // @ts-ignore
         const __VLS_0 = __VLS_asFunctionalComponent(Input, new Input({
+            modelValue: (__VLS_ctx.searchValue),
             placeholder: (props.searchInputPlaceholder),
             ...{ class: "bg-gray-50 border-none" },
         }));
         const __VLS_1 = __VLS_0({
+            modelValue: (__VLS_ctx.searchValue),
             placeholder: (props.searchInputPlaceholder),
             ...{ class: "bg-gray-50 border-none" },
         }, ...__VLS_functionalComponentArgsRest(__VLS_0));
@@ -71,13 +83,13 @@ export default await (async () => {
     }
     if (__VLS_ctx.shouldShowButton) {
         __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
-            ...{ class: "border-t border-t-neutral-400 pt-4" },
+            ...{ class: "border-t border-neutral-200 pt-4" },
         });
         __VLS_asFunctionalElement(__VLS_intrinsicElements.button, __VLS_intrinsicElements.button)({
             ...{ onClick: (__VLS_ctx.toggleShowAll) },
             ...{ class: "mt-3 text-primary" },
         });
-        (__VLS_ctx.showAll ? "Скрыть" : "+Показать все");
+        (__VLS_ctx.showAll ? "Скрыть" : "Показать все");
     }
     /** @type {__VLS_StyleScopedClasses['font-bold']} */ ;
     /** @type {__VLS_StyleScopedClasses['mb-3']} */ ;
@@ -93,7 +105,7 @@ export default await (async () => {
     /** @type {__VLS_StyleScopedClasses['overflow-auto']} */ ;
     /** @type {__VLS_StyleScopedClasses['scrollbar']} */ ;
     /** @type {__VLS_StyleScopedClasses['border-t']} */ ;
-    /** @type {__VLS_StyleScopedClasses['border-t-neutral-400']} */ ;
+    /** @type {__VLS_StyleScopedClasses['border-neutral-200']} */ ;
     /** @type {__VLS_StyleScopedClasses['pt-4']} */ ;
     /** @type {__VLS_StyleScopedClasses['mt-3']} */ ;
     /** @type {__VLS_StyleScopedClasses['text-primary']} */ ;
@@ -104,6 +116,7 @@ export default await (async () => {
                 FiltersCheckbox: FiltersCheckbox,
                 Input: Input,
                 showAll: showAll,
+                searchValue: searchValue,
                 list: list,
                 shouldShowButton: shouldShowButton,
                 toggleShowAll: toggleShowAll,

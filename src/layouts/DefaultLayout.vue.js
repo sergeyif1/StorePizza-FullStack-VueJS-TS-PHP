@@ -4,6 +4,7 @@ import Title from "@/components/Title.vue";
 import Container from "@/components/shared/Container.vue";
 import TopBar from "@/components/shared/TopBar.vue";
 import Filters from "@/components/shared/Filters.vue";
+import ProductsGroupList from "@/components/shared/Products-Group-List.vue";
 const fontClass = ref("");
 onMounted(() => {
     // Загрузка шрифта Nunito с нужными параметрами
@@ -80,10 +81,416 @@ __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.d
     ...{ class: "flex-1" },
 });
 __VLS_asFunctionalElement(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({
+    ref: "containerRef",
     ...{ class: "flex flex-wrap gap-16" },
 });
+/** @type {typeof __VLS_ctx.containerRef} */ ;
+/** @type {[typeof ProductsGroupList, ]} */ ;
+// @ts-ignore
+const __VLS_18 = __VLS_asFunctionalComponent(ProductsGroupList, new ProductsGroupList({
+    title: "",
+    categoryId: "0",
+    items: ([]),
+}));
+const __VLS_19 = __VLS_18({
+    title: "",
+    categoryId: "0",
+    items: ([]),
+}, ...__VLS_functionalComponentArgsRest(__VLS_18));
+/** @type {[typeof ProductsGroupList, ]} */ ;
+// @ts-ignore
+const __VLS_21 = __VLS_asFunctionalComponent(ProductsGroupList, new ProductsGroupList({
+    title: "Пиццы",
+    categoryId: "1",
+    items: ([
+        {
+            id: 1,
+            name: 'Пепперони',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 200,
+            items: [{ price: 200 }],
+        },
+        {
+            id: 2,
+            name: 'Маргарита',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 180,
+            items: [{ price: 180 }],
+        },
+        {
+            id: 3,
+            name: 'Четыре сыра',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 250,
+            items: [{ price: 250 }],
+        },
+        {
+            id: 4,
+            name: 'Мясная',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 300,
+            items: [{ price: 300 }],
+        },
+        {
+            id: 5,
+            name: 'Вегетарианская',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 220,
+            items: [{ price: 220 }],
+        },
+        {
+            id: 6,
+            name: 'Греческая',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 240,
+            items: [{ price: 240 }],
+        },
+        {
+            id: 7,
+            name: 'Капричоза',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 260,
+            items: [{ price: 260 }],
+        },
+        {
+            id: 8,
+            name: 'Сырная',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 230,
+            items: [{ price: 230 }],
+        },
+        {
+            id: 9,
+            name: 'Овощная',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 210,
+            items: [{ price: 210 }],
+        },
+        {
+            id: 10,
+            name: 'Морская',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 280,
+            items: [{ price: 280 }],
+        },
+        {
+            id: 11,
+            name: 'Пицца с грибами',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 240,
+            items: [{ price: 240 }],
+        },
+        {
+            id: 12,
+            name: 'Пицца с ананасами',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 250,
+            items: [{ price: 250 }],
+        },
+        {
+            id: 13,
+            name: 'Пицца с курицей',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 270,
+            items: [{ price: 270 }],
+        },
+        {
+            id: 14,
+            name: 'Пицца с беконом',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 290,
+            items: [{ price: 290 }],
+        },
+        {
+            id: 15,
+            name: 'Пицца с ветчиной',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 260,
+            items: [{ price: 260 }],
+        },
+        {
+            id: 16,
+            name: 'Пицца с креветками',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 320,
+            items: [{ price: 320 }],
+        },
+        {
+            id: 17,
+            name: 'Пицца с тунцом',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 300,
+            items: [{ price: 300 }],
+        },
+        {
+            id: 3,
+            name: 'Гавайская',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 220,
+            items: [{ price: 220 }],
+        },
+    ]),
+}));
+const __VLS_22 = __VLS_21({
+    title: "Пиццы",
+    categoryId: "1",
+    items: ([
+        {
+            id: 1,
+            name: 'Пепперони',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 200,
+            items: [{ price: 200 }],
+        },
+        {
+            id: 2,
+            name: 'Маргарита',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 180,
+            items: [{ price: 180 }],
+        },
+        {
+            id: 3,
+            name: 'Четыре сыра',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 250,
+            items: [{ price: 250 }],
+        },
+        {
+            id: 4,
+            name: 'Мясная',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 300,
+            items: [{ price: 300 }],
+        },
+        {
+            id: 5,
+            name: 'Вегетарианская',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 220,
+            items: [{ price: 220 }],
+        },
+        {
+            id: 6,
+            name: 'Греческая',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 240,
+            items: [{ price: 240 }],
+        },
+        {
+            id: 7,
+            name: 'Капричоза',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 260,
+            items: [{ price: 260 }],
+        },
+        {
+            id: 8,
+            name: 'Сырная',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 230,
+            items: [{ price: 230 }],
+        },
+        {
+            id: 9,
+            name: 'Овощная',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 210,
+            items: [{ price: 210 }],
+        },
+        {
+            id: 10,
+            name: 'Морская',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 280,
+            items: [{ price: 280 }],
+        },
+        {
+            id: 11,
+            name: 'Пицца с грибами',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 240,
+            items: [{ price: 240 }],
+        },
+        {
+            id: 12,
+            name: 'Пицца с ананасами',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 250,
+            items: [{ price: 250 }],
+        },
+        {
+            id: 13,
+            name: 'Пицца с курицей',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 270,
+            items: [{ price: 270 }],
+        },
+        {
+            id: 14,
+            name: 'Пицца с беконом',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 290,
+            items: [{ price: 290 }],
+        },
+        {
+            id: 15,
+            name: 'Пицца с ветчиной',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 260,
+            items: [{ price: 260 }],
+        },
+        {
+            id: 16,
+            name: 'Пицца с креветками',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 320,
+            items: [{ price: 320 }],
+        },
+        {
+            id: 17,
+            name: 'Пицца с тунцом',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 300,
+            items: [{ price: 300 }],
+        },
+        {
+            id: 3,
+            name: 'Гавайская',
+            imageUrl: '/1325588gfgfd.jpg',
+            price: 220,
+            items: [{ price: 220 }],
+        },
+    ]),
+}, ...__VLS_functionalComponentArgsRest(__VLS_21));
+/** @type {[typeof ProductsGroupList, ]} */ ;
+// @ts-ignore
+const __VLS_24 = __VLS_asFunctionalComponent(ProductsGroupList, new ProductsGroupList({
+    title: "Салаты",
+    categoryId: "2",
+    items: ([
+        {
+            id: 1,
+            name: 'Цезарь',
+            imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
+            price: 150,
+            items: [{ price: 150 }],
+        },
+        {
+            id: 2,
+            name: 'Греческий',
+            imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
+            price: 130,
+            items: [{ price: 130 }],
+        },
+        {
+            id: 3,
+            name: 'Овощной',
+            imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
+            price: 120,
+            items: [{ price: 120 }],
+        },
+    ]),
+}));
+const __VLS_25 = __VLS_24({
+    title: "Салаты",
+    categoryId: "2",
+    items: ([
+        {
+            id: 1,
+            name: 'Цезарь',
+            imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
+            price: 150,
+            items: [{ price: 150 }],
+        },
+        {
+            id: 2,
+            name: 'Греческий',
+            imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
+            price: 130,
+            items: [{ price: 130 }],
+        },
+        {
+            id: 3,
+            name: 'Овощной',
+            imageUrl: '/salat/11ef8d3bc9e84fb7b5cfb7f47c6fb334.avif',
+            price: 120,
+            items: [{ price: 120 }],
+        },
+    ]),
+}, ...__VLS_functionalComponentArgsRest(__VLS_24));
+/** @type {[typeof ProductsGroupList, ]} */ ;
+// @ts-ignore
+const __VLS_27 = __VLS_asFunctionalComponent(ProductsGroupList, new ProductsGroupList({
+    title: "Напитки",
+    categoryId: "3",
+    items: ([
+        {
+            id: 1,
+            name: 'Кока-Кола',
+            imageUrl: '/drink/01959617dc25776d8cbf65dd4af4ea60.avif',
+            price: 50,
+            items: [{ price: 50 }],
+        },
+        {
+            id: 2,
+            name: 'Фанта',
+            imageUrl: '/drink/0194b76f2778790e920584c191edd032.avif',
+            price: 50,
+            items: [{ price: 50 }],
+        },
+        {
+            id: 3,
+            name: 'Спрайт',
+            imageUrl: '/drink/0194b770601f78a99d9671579a5fb301.avif',
+            price: 50,
+            items: [{ price: 50 }],
+        },
+        {
+            id: 4,
+            name: 'Экспрессо',
+            imageUrl: '/drink/0195961733e974ee8f11929fc2a0e0a8.avif',
+            price: 50,
+            items: [{ price: 50 }],
+        },
+    ]),
+}));
+const __VLS_28 = __VLS_27({
+    title: "Напитки",
+    categoryId: "3",
+    items: ([
+        {
+            id: 1,
+            name: 'Кока-Кола',
+            imageUrl: '/drink/01959617dc25776d8cbf65dd4af4ea60.avif',
+            price: 50,
+            items: [{ price: 50 }],
+        },
+        {
+            id: 2,
+            name: 'Фанта',
+            imageUrl: '/drink/0194b76f2778790e920584c191edd032.avif',
+            price: 50,
+            items: [{ price: 50 }],
+        },
+        {
+            id: 3,
+            name: 'Спрайт',
+            imageUrl: '/drink/0194b770601f78a99d9671579a5fb301.avif',
+            price: 50,
+            items: [{ price: 50 }],
+        },
+        {
+            id: 4,
+            name: 'Экспрессо',
+            imageUrl: '/drink/0195961733e974ee8f11929fc2a0e0a8.avif',
+            price: 50,
+            items: [{ price: 50 }],
+        },
+    ]),
+}, ...__VLS_functionalComponentArgsRest(__VLS_27));
 var __VLS_14;
-var __VLS_18 = {};
+var __VLS_30 = {};
 /** @type {__VLS_StyleScopedClasses['mt-5']} */ ;
 /** @type {__VLS_StyleScopedClasses['font-extrabold']} */ ;
 /** @type {__VLS_StyleScopedClasses['min-h-screen']} */ ;
@@ -97,7 +504,7 @@ var __VLS_18 = {};
 /** @type {__VLS_StyleScopedClasses['flex-wrap']} */ ;
 /** @type {__VLS_StyleScopedClasses['gap-16']} */ ;
 // @ts-ignore
-var __VLS_19 = __VLS_18;
+var __VLS_31 = __VLS_30;
 var __VLS_dollars;
 const __VLS_self = (await import('vue')).defineComponent({
     setup() {
@@ -107,6 +514,7 @@ const __VLS_self = (await import('vue')).defineComponent({
             Container: Container,
             TopBar: TopBar,
             Filters: Filters,
+            ProductsGroupList: ProductsGroupList,
             fontClass: fontClass,
         };
     },

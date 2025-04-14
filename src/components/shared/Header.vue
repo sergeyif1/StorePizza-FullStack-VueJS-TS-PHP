@@ -19,7 +19,8 @@ const computedClass = computed(
   <header :class="computedClass">
     <Container class="flex item-container justify-between py-8">
       <!-- Левая часть -->
-      <RouterLink to="/vue-router">
+      <!-- <RouterLink to="/vue-router"> -->
+      <RouterLink to="/">
         <div class="flex items-center gap-4">
           <img src="@/logo.png" alt="Logo" width="35" height="35" />
           <div>
