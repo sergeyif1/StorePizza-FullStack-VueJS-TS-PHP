@@ -1,5 +1,3 @@
-# Vue 3 + TypeScript + Vite
-
 <h1 align="center">Hi there, I'm Sergey!
             <img src="./imges/Hi.gif" height="32" alt="Hi" />
         </h1>
@@ -7,9 +5,11 @@
 <h3 align="center">👀 What is this and what is it for?</h3>
 
 <p>This is an attempt to structure the project's space using technologies that are new to me.</p>
-[🌐 Project Deployment](https://storepizza-fullstack-vuejs.vercel.app/)
-<p>For now, the project isn't being maintained and developed due to objective circumstances</p>
-<p>Here's what I used</p>
+
+<br>[🌐 Project Deployment](https://storepizza-fullstack-vuejs.vercel.app/)
+
+<br><p>For now, the project isn't being maintained and developed due to objective circumstances</p>
+<br><p>Here's what I used</p>
 
 ---
 
