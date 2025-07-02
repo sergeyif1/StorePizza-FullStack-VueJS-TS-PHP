@@ -4,7 +4,6 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
 
-Давайте разберем проект подробно, основываясь на структуре, конфигурации и функциональности.
 
 ---
 
@@ -80,5 +79,3 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
    - Vite обеспечивает быструю разработку с горячей перезагрузкой, что делает проект удобным для изменения и отладки.
 
 ---
-
-Если нужно, я могу более подробно разобрать любой аспект проекта или конкретные файлы, которые вас интересуют. Какой следующий шаг?

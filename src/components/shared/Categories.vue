@@ -47,4 +47,3 @@ function cn(...classes: any[]) {
     </a>
   </div>
 </template>
-<!-- :href="`#${cat.name}`" -->
