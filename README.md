@@ -13,75 +13,77 @@
 
 ---
 
-### 1. **Структура проекта**
-Проект организован по типичной структуре для приложений Vue с использованием Vite. Ключевые директории и файлы:
-- **`.vscode/`** — конфигурация редактора VS Code.
-- **`dist/`** — результирующие файлы сборки (игнорируются в репозитории).
-- **`node_modules/`** — папка зависимостей, установленная через npm.
-- **`public/`** — статические файлы, которые копируются без изменений в финальную сборку.
-- **`src/`** — основной код приложения:
-  - **`assets/`** — хранит стили и медиа-файлы. Например, `index.css` содержит глобальные стили.
-  - **`components/`** — здесь расположены Vue-компоненты:
-    - **`ui/button/`** — кнопка `Button` (UI-компонент, вероятно, стилизованный TailwindCSS).
-    - **`HelloWorld.vue`** — тестовый или демонстрационный компонент.
-  - **`lib/`** — может содержать вспомогательные модули или библиотеки (например, `utils.ts` для утилитарных функций).
-  - **`App.vue`** — корневой компонент Vue.
-  - **`main.ts`** — точка входа, где приложение создается и монтируется.
-- **`tailwind.config.js`** — настройки TailwindCSS (если кастомизация нужна).
-- **`vite.config.ts`** — конфигурация Vite.
-- **`package.json`** — хранит зависимости и npm-скрипты.
+### 1. **Project Structure**
+The project follows a typical Vue application structure using Vite. Key directories and files include:
+- **`.vscode/`** — VS Code editor configuration.
+- **`dist/`** — build output files (ignored in the repository).
+- **`node_modules/`** — dependencies installed via npm.
+- **`public/`** — static files copied as-is into the final build.
+- **`src/`** — main application code:
+  - **`assets/`** — contains styles and media files. For example, `index.css` holds global styles.
+  - **`components/`** — Vue components:
+    - **`ui/button/`** — `Button` component (a UI element likely styled with TailwindCSS).
+    - **`HelloWorld.vue`** — a test or demo component.
+  - **`lib/`** — may contain helper modules or libraries (e.g., `utils.ts` for utility functions).
+  - **`App.vue`** — root Vue component.
+  - **`main.ts`** — entry point where the app is created and mounted.
+- **`tailwind.config.js`** —  TailwindCSS configuration (for customization if needed).
+- **`vite.config.ts`** — Vite configuration file.
+- **`package.json`** — lists dependencies and npm scripts.
 
 ---
 
-### 2. **Конфигурация**
-#### Vite (в `vite.config.ts`):
-- **Плагин Vue**: `@vitejs/plugin-vue` позволяет работать с `.vue` файлами.
-- **PostCSS**: Настроен на использование `tailwindcss` и `autoprefixer`.
-- **Alias `@`**: Указывает на папку `src`, упрощая импорт файлов (например, `@/components/ui/button`).
+### 2. **Configuration**
+#### Vite (in vite.config.ts)::
+- **Vue plugin**: `@vitejs/plugin-vue` enables handling `.vue` files.
+- **PostCSS**: configured to use `tailwindcss` and `autoprefixer`.
+- **Alias `@`**: points to the `src`, folder to simplify imports (e.g., `@/components/ui/button`).
   
-#### Зависимости (в `package.json`):
-- **Продакшн-зависимости**:
-  - **Vue 3**: Библиотека для построения пользовательских интерфейсов.
-  - **TailwindCSS**: Утилитарный CSS-фреймворк для стилизации.
-  - **TailwindCSS-плагины**: Например, `tailwindcss-animate` для анимаций.
-  - **Lucide Vue**: Набор иконок.
-  - **Radix Vue**: Компоненты для создания UI.
-- **Dev-зависимости**:
-  - **Vite**: Бундлер и сервер разработки.
-  - **TypeScript**: Используется для типизации.
-  - **Vue TSC**: Инструмент для проверки типов Vue-компонентов.
-  - **PostCSS** и **Autoprefixer**: Для работы с CSS.
+#### Dependencies (in`package.json`):
+- **Production dependencies**:
+  - **Vue 3**: framework for building user interfaces.
+  - **TailwindCSS**: utility-first CSS framework for styling.
+  - **TailwindCSS-plugins**: e.g., `tailwindcss-animate` for animations.
+  - **Lucide Vue**: icon set.
+  - **Radix Vue**: UI component primitives.
+- **Dev dependencies**:
+  - **Vite**: bundler and dev server.
+  - **TypeScript**: used for type checking.
+  - **Vue TSC**: type-checking tool for Vue components.
+  - **PostCSS** && **Autoprefixer**: CSS processing tools.
 
-#### Сборка и скрипты:
-- **`dev`**: Запускает сервер разработки с Vite.
-- **`build`**: Выполняет проверку типов и собирает проект.
-- **`preview`**: Показывает результат сборки.
-
+#### Build and scripts:
+- **`dev`**: runs Vite dev server.
+- **`build`**: performs type checking and builds the project.
+- **`preview`**:previews the built project.
 ---
 
-### 3. **Функциональность**
-Основное приложение:
+### 3. **Functionality**
+Main application:
 - **`App.vue`**: 
-  - Импортирует компонент `Button` из UI-компонентов.
-  - Шаблон рендерит `<Button>` с текстом "Button".
+  - Imports the `Button` component from UI components.
+  - Template renders `<Button>` with the text “Button”.
 - **`main.ts`**:
-  - Создает Vue-приложение на основе `App.vue` и монтирует его в DOM-элемент с `id="app"`.
+  - Creates the Vue app based on `App.vue` and mounts it to the DOM element with `id="app"`.
 
-#### Возможные функциональные особенности:
-1. **UI-компоненты**:
-   - `Button` импортируется из `@/components/ui/button`. Скорее всего, это переиспользуемый компонент, стилизованный с использованием TailwindCSS.
-   - Возможно, UI-компоненты предоставляют настраиваемые и стилизованные элементы.
+#### Possible features:
+1. **UI Components**:
+   - `Button` imported from `@/components/ui/button`. is likely a reusable, TailwindCSS-styled component.
+   - UI components may provide customizable, styled elements.
 
-2. **Глобальные стили**:
-   - В `./assets/index.css` подключены стили TailwindCSS и, возможно, дополнительные кастомные стили.
+2. **Global styles**:
+   - `./assets/index.css` includes TailwindCSS styles and possibly additional custom styles.
 
-3. **Поддержка TypeScript**:
-   - Проект настроен для использования строгой типизации, что улучшает читаемость и надежность кода.
+3. **TypeScript support**:
+   - The project is set up for strict typing, improving code readability and reliability.
 
 4. **TailwindCSS**:
-   - TailwindCSS используется для стилизации и добавления анимаций через плагин `tailwindcss-animate`.
+   - TailwindCSS Used for styling and adding animations via the `tailwindcss-animate` plugin.
 
 5. **Vite**:
-   - Vite обеспечивает быструю разработку с горячей перезагрузкой, что делает проект удобным для изменения и отладки.
+   - Provides fast development with hot module replacement, making it easy to modify and debug the project.
 
 ---
+        
+<h3 align="center">Support</h3>
+        <p><strong>Е-Mail:</strong> <a href="mailto:sergeyif1@gmail.com" class="link">sergeyif1@gmail.com</a></p>
